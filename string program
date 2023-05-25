@@ -1,0 +1,23 @@
+#include<string.h>
+int main
+{
+char str[100];
+    int i, specialCount = 0, lowercaseCount = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if ((str[i] >= 'a' && str[i] <= 'z')) {
+            lowercaseCount++;
+        }
+        else if (!(str[i] >= '0' && str[i] <= '9') && !(str[i] >= 'A' && str[i] <= 'Z') && str[i] != ' ') {
+            specialCount++;
+        }
+    }
+
+    printf("Number of lowercase letters: %d\n", lowercaseCount);
+    printf("Number of special characters: %d\n", specialCount);
+
+    return 0;
+}
